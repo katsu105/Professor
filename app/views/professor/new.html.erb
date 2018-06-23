@@ -1,0 +1,15 @@
+<%= render 'partial/navbar' %>
+
+<div class="col-md-9 text-center">
+      <div class="panel panel-default">
+        <div class="panel-heading">新規投稿</div>
+        <div class="panel-body">
+        	<%= form_tag('/questions', method: :post) do %>
+		    <div class="question"><input placeholder="タイトル" type="text" name="name"></div>
+		    <div class="question1"><textarea cols="30" name="text" placeholder="例)肩こりを30秒で治す方法を教えて!" rows="10"></textarea></div>
+		    <div><input  class= "btn btn-primary" type="submit" value="投稿する！"></div>
+		  <% end %>
+		</div>
+    </div>
+  </div>
+</div>

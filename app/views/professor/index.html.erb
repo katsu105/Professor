@@ -1,0 +1,48 @@
+<div class="jumbotron">
+  <%= render 'partial/navbar' %>
+
+<!-- 検索フォーム -->
+ <div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-lg-9 text-center">
+	  <div class="col-lg-8">
+	    <div class="input-group">
+	      <input type="text" class="form-control" placeholder="気になるギモンを検索してみよう！">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default" type="button">検索</button>
+	      </span>
+	    </div><!-- /input-group -->
+	  </div><!-- /.col-lg-6 -->
+	</div><!-- /.row -->
+  </div>
+ </div>
+</div>
+
+
+    <section class="blog">
+      <h2 class="blog-headline">質問一覧</h2>
+      <div class="blog-box">
+        <% @question.each do |question| %>
+        <span class="name"><%= question.name %></span>
+        <span class="name"><%= question.text %></span>
+          <div class="blog-item clearfix">
+            <div class="blog-image"></div>
+            <section class="blog-text">
+              <%#h3 class="blog-text-headline"><%= link_to blog.title, blog_path(blog) %></h3>
+            </section>
+          </div>
+        <% end %>
+      </div>
+
+
+
+<!-- <div class="contents row" >
+	<% @question.each do |question| %>
+	  <div class="content_post" style="background-image: url(<%= question.image %>);">
+        <%= simple_format(question.text) %>
+        <span class="name"><%= question.text %></span>
+        <span class="name"><%= question.name %></span>
+        <span class="name"><%= question.id %></span>
+      </div>
+	<% end %>
+</div> -->
